@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>HapeemSoftech</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!-- My costume CSS-->
+        <link rel="stylesheet" href="../css/AdminDash.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    </head>
+
+    <body id="sidemenuBody">
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header" style="background: white;">
+                    <h3 style="color: black;" class="logoDev">Logo</h3>
+                    <!--<img src="logo.png" alt="logo">-->
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">sub-menu-1</a>
+                            </li>
+                            <li>
+                                <a href="#">sub-menu-2</a>
+                            </li>
+                            <li>
+                                <a href="#">sub-menu-3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Page Content here-->
+            <div id="content">
+                <div class="menu-header">
+                    <button type="button" id="sidebarCollapse" class="btn menu-btn">
+                        <img src="../Img_Lib/nav.png" alt="Menu">
+                    </button>
+                    <span class="menu-text">Dashboard</span>
+                </div>
+                <div class="container container_Pos">
+                    <div class="row">
+                        <div class="col-sm-7 bg-2 container_Sub_1">
+                            <div onclick="location.href='Management/teachers_list.html';" class="my_container_1 bg-3 my_link">
+                                <h2>Teacher's</h2>
+                                <h1>89</h1>
+                            </div>
+                            <div onclick="location.href='Management/students_list.html';" class="my_container_2 bg-4 my_link">
+                                <h2>Student's</h2>
+                                <h1>2567</h1>
+                            </div>
+                            <div onclick="location.href='Management/hostel_Management.html';" class="my_container_3 bg-5 my_link">
+                                <h2>Hostel Management</h2>
+                                <h1>06</h1>
+                            </div>
+                            <div onclick="location.href='Management/transport_Management.html';" class="my_container_4 bg-6 my_link">
+                                <h2>Transport Management</h2>
+                                <h1>16</h1>
+                            </div>
+                            <div onclick="location.href='Management/fees_Management.html';" class="my_container_5 con5_width_adder bg-7 my_link">
+                                <h2>Fees Management</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 bg-1 container_Sub_1">
+                            <div onclick="location.href='Events/announcement_Management.html';" class="my_container_6 bg-4 my_link">
+                                <h2>Announcement</h2>
+                            </div>
+                            <div onclick="location.href='Events/leave_Management.html'" class="my_container_7 bg-5 my_link">
+                                <h2>Leave Management</h2>
+                            </div><br> <!--romove it-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Personal JS-->
+        <script src="../js/script.js"></script>
+    </body>
+</html>
