@@ -89,6 +89,7 @@
                                     <th class="hidden-xs">ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Details</th>
                                  </tr>
                               </thead>
                               <tbody>
@@ -100,6 +101,7 @@
                                     <td class="hidden-xs">1</td>
                                     <td>John Doe</td>
                                     <td>johndoe@example.com</td>
+                                    <td><button  onclick="location.href='Management/fees_Management.html';" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                                  <tr>
                                     <td align="center">
@@ -109,6 +111,7 @@
                                     <td class="hidden-xs">2</td>
                                     <td>Joy happy</td>
                                     <td>Jhappy@example.com</td>
+                                    <td><button  onclick="location.href='Management/fees_Management.html';" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                                  <tr>
                                     <td align="center">
@@ -118,6 +121,7 @@
                                     <td class="hidden-xs">2</td>
                                     <td>King lime</td>
                                     <td>Liking@example.com</td>
+                                    <td><button  onclick="location.href='Management/fees_Management.html';" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                               </tbody>
                            </table>
@@ -149,7 +153,12 @@
             </div>
          </div>
       </div>
-
+      <script>
+          function myFunction() {
+            confirm("Press a button!");
+          }
+          </script>
+          
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <!-- Popper.JS -->

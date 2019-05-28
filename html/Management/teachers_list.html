@@ -15,6 +15,78 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
       <!------ Include the above in your HEAD tag ---------->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+      <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box;}
+            
+            /* Button used to open the contact form - fixed at the bottom of the page */
+            .open-button {
+              background-color: #555;
+              color: white;
+              padding: 16px 20px;
+              border: none;
+              cursor: pointer;
+              opacity: 0.8;
+              position: fixed;
+              bottom: 23px;
+              right: 28px;
+              width: 280px;
+            }
+            
+            /* The popup form - hidden by default */
+            .form-popup {
+              display: none;
+              position: fixed;
+              bottom: 0;
+              right: 15px;
+              border: 3px solid #f1f1f1;
+              z-index: 9;
+            }
+            
+            /* Add styles to the form container */
+            .form-container {
+              max-width: 300px;
+              padding: 10px;
+              background-color: white;
+            }
+            
+            /* Full-width input fields */
+            .form-container input[type=text], .form-container input[type=password] {
+              width: 100%;
+              padding: 15px;
+              margin: 5px 0 22px 0;
+              border: none;
+              background: #f1f1f1;
+            }
+            
+            /* When the inputs get focus, do something */
+            .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+              background-color: #ddd;
+              outline: none;
+            }
+            
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px 20px;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+              margin-bottom:10px;
+              opacity: 0.8;
+            }
+            
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+              background-color: red;
+            }
+            
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+              opacity: 1;
+            }
+            </style>
    </head>
    <body id="sidemenuBody">
       <div class="wrapper">
@@ -89,6 +161,7 @@
                                     <th class="hidden-xs">ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Details</th>
                                  </tr>
                               </thead>
                               <tbody>
@@ -100,6 +173,7 @@
                                     <td class="hidden-xs">1</td>
                                     <td>Kill Doe</td>
                                     <td>Kdoe@example.com</td>
+                                    <td><button  onclick="myFunction()" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                                  <tr>
                                     <td align="center">
@@ -109,6 +183,7 @@
                                     <td class="hidden-xs">2</td>
                                     <td>happy simba</td>
                                     <td>HSimba@example.com</td>
+                                    <td><button   onclick="myFunction()" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                                  <tr>
                                     <td align="center">
@@ -118,13 +193,14 @@
                                     <td class="hidden-xs">2</td>
                                     <td>Loya Kin</td>
                                     <td>KLoya@example.com</td>
+                                    <td><button   onclick="myFunction()" class="btn btn-info">Click <i class="fa fa-building"></i></button></td>
                                  </tr>
                               </tbody>
                            </table>
                         </div>
                         <div class="panel-footer">
                            <div class="row">
-                              <div class="col col-xs-4">
+                              <div class="col col-xs-4"> 
                                  Page 1 of 5
                               </div>
                               <div class="col col-xs-8">
@@ -149,6 +225,26 @@
             </div>
          </div>
       </div>
+      <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Details</h1>
+
+              <label for="id"><b>Class</b></label>
+              <input type="text" placeholder="1" name="id" required>
+          
+              <label for="name"><b>Name</b></label>
+              <input type="text" placeholder="" name="name" required>
+          
+              <label for="psw"><b>Email</b></label>
+              <input type="text" placeholder="" name="psw" required>
+
+              <label for="clss"><b>Class</b></label>
+              <input type="text" placeholder="" name="clss" required>
+          
+              <button type="submit" class="btn">submit</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+      </div>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <!-- Popper.JS -->
@@ -161,5 +257,14 @@
       <script src="../../js/script.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script>
+            function myFunction() {
+               document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm() {
+               document.getElementById("myForm").style.display = "none";
+            }
+
+      </script>
    </body>
 </html>
