@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HappenSoftech</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	</head>
+	<body>
+		<!-- First Container -->
+		<div class="container-fluid container_main_Pos shadow-lg p-3 mb-5 bg-black rounded">
+			<div class="row">
+				<div class="col-sm-8 bg-1">
+					<h1 class="head_font">HappenSoftech</h1>
+					<h3 class="subhead_font">Powered By Rudra</h3>
+				</div>
+				<div class="col-sm-3 bg-2 container_Sub_1 div_shadow_common">
+					<button onclick="document.getElementById('id01').style.display='block'" class="button_1_Pos">Login</button>
+					<div id="id01" class="modal">
+						<form class="modal-content animate" action="html/admin_dashboard.html">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+								<img src="Img_Lib/Admin_avatar2.png" alt="Avatar" class="avatar">
+							</div>
+							<div class="container">
+								<label for="uname"><b>Username</b></label>
+								<input type="text" placeholder="Enter Username" name="uname" required>
+								<label for="passcode"><b>Password</b></label>
+								<input type="password" placeholder="Enter Password" name="passcode" required>
+								<button type="submit" class="login">Login</button>
+							</div>
+							<div class="container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot Your <a href="#"> Username </a> or <a href="#"> Password</a>?</span>
+							</div>
+						</form>
+					</div>
+					<p class="par_1"></p>
+					<button>Forgot Password</button>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="js/script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
